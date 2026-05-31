@@ -28,6 +28,7 @@ while (( 1 )); do
     good_track=$(find . -type f \( -name "*.flac" -o -name "*.mp3" -o -name "*.m4a" \) -size +${MIN_SIZE}c -mmin -60 | wc -l)
     echo "Новых треков: $good_track"
 
+    # !!! Надо исправить
     if (( good_track == 0 && deleted_count == 0 )); then
         echo "Нет новых файлов"
         break
